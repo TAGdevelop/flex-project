@@ -1,0 +1,17 @@
+
+
+$primary: #ffcc00;
+$secondary: #4b4b4b  !default;
+$black: #000 !default;
+
+#tag_footer.primary_bg {
+    background:$secondary;
+    h2 {color:#fff;}
+    a { color:blue;}
+     a:hover{ color:#fff;}
+}
+#tag_header.primary_bg {
+    h2 {color:#fff;}
+    a { color:blue;}
+     a:hover{ color:#fff;}
+}

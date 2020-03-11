@@ -1,0 +1,51 @@
+:root{
+    --primary_bgcolor:#16163F;
+    --primary_translucent:#16163F;
+    --primary_color:#fff;
+    --primary_link:#1a0dab;
+    --primary_hover:#6f02a6;
+    --body_bgcolor:#fff;
+    --body_color:#000;
+    --hfont:'AvenirLTStd-Black',sans-serif;
+}
+
+/* GLOBAL */
+body {margin:0 auto;}
+.tag_style a,
+.tag_style a {
+    text-decoration:none;
+}
+    /** DARK PRIMARY **/
+.tag_style.tag_primary_dark .tag_primary,
+.tag_style.tag_primary_dark .tag_primary .elementor-nav-menu--dropdown  {
+    background:var(--primary_bgcolor);
+}
+.tag_style.tag_primary_dark .tag_primary,
+.tag_style.tag_primary_dark .tag_primary h1,
+.tag_style.tag_primary_dark .tag_primary h2,
+.tag_style.tag_primary_dark .tag_primary h3,
+.tag_style.tag_primary_dark .tag_primary h4,
+.tag_style.tag_primary_dark .tag_primary h5,
+.tag_style.tag_primary_dark .tag_primary h6,
+.tag_style.tag_primary_dark .tag_primary p,
+
+.tag_style.tag_primary_dark .tag_primary .elementor-heading-title, 
+.tag_style.tag_primary_dark .tag_primary .elementor-nav-menu,
+.tag_style.tag_primary_dark .tag_primary .elementor-social-icon i,
+.tag_style.tag_primary_dark .tag_primary  .elementor-icon-list-icon i {
+    color:var(--primary_color);
+}
+    
+/** SECTION AUTO SHAPES **/
+.tag_style.tag_body_light .elementor-shape-fill {
+    fill:var(--body_bgcolor);
+}
+.tag_style.tag_primary_dark .tag_primary a {
+    color:var(--primary_link);
+}
+.tag_style.tag_primary_dark .tag_primary a:hover,
+.tag_style.tag_primary_dark .tag_primary span a:hover,
+.tag_style.tag_primary_dark .tag_primary div a:hover
+{
+    color:var(--primary_hover);
+}

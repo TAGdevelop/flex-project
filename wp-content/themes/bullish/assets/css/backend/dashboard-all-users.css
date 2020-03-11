@@ -1,0 +1,186 @@
+ 
+
+
+
+/*** ELEMENTOR some elements in Branda are overwritten by elementor ***/
+
+body #adminmenu #toplevel_page_elementor div.wp-menu-image:before{content: "\f217"; font-family: dashicons;font-size:18px;margin-top:1px;}
+body #adminmenu #menu-posts-elementor_library .wp-menu-image:before, body .eicon-elementor-square:before {content: "\f217"; font-family: dashicons;}
+body .dashicons-admin-page:before {content: "\f132";}
+body .menu-icon-elementor_library .wp-menu-name:before{ content: "tag";}
+body .menu-icon-elementor_library .wp-menu-name:after{ content: "\2122";}
+
+/* icon on the elementor loader inside wordpres editor */ 
+#elementor-editor .elementor-loader  {padding:25px 30px 37px;}
+#elementor-editor .elementor-loader-box:first-of-type  {display:none;}
+#elementor-editor .elementor-loader-box:nth-of-type(2){ width: 100%;}
+#elementor-editor .elementor-loader-box:nth-of-type(3) {left: 42%;
+    text-align: center; height: 70%; width: 20%; top: 30%;}
+#elementor-editor .elementor-loader-box:nth-of-type(4) {background:none;
+}
+#elementor-editor .elementor-loader-box:nth-of-type(4):before {content: "tagBUILDER"; color: #a4afb7; position: absolute; bottom: -22px; left: -34px;font-size: 16px;}
+#elementor-editor .elementor-loader-box:nth-of-type(4):after {right: -20px; font-size: 16px; bottom: -20px; position: absolute; content: "\2122";
+    color: #a4afb7;}
+
+
+/** WP Menu **/
+
+/*
+#menu-pages .wp-menu-name:before{ content: "Main ";} 
+#menu-posts .wp-menu-name:before{ content: "Blog ";}
+*/
+.menu-icon-post .dashicons-admin-post:before {
+    content: "\f132";
+}
+.menu-icon-ai1ec_event .dashicons-admin-post:before {
+    content: "\f145";
+}
+
+
+/** WP DASHBOARD **/
+/*body #dashboard-widgets-wrap {display:none;} */
+.welcome-panel-close {display:none;}
+/* top dashboard menu stuff */
+#toplevel_page_edit-post_type-wp_block {display:none;}
+/** Hide Admin top toolbar items */
+#wp-admin-bar-tbex-sitegroup-manage-content,
+#wp-admin-bar-website-settings-landingpages,
+#wp-admin-bar-tbex-sitegroup-forms,
+#wp-admin-bar-tbex-sitegroup-elements,
+#wp-admin-bar-tbex-sitegroup-stuff,
+#wpadminbar .quicklinks .menupop ul.ab-sub-secondary, #wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu,#wp-admin-bar-new-content,
+#wp-admin-bar-tbex-toolbar-extras, #wp-admin-bar-wp-logo,#adminmenu .tag_dash_divider div.wp-menu-image
+{display:none;}
+
+#adminmenu .tag_dash_divider div.wp-menu-name {text-align:center;position:relative;z-index:1;}
+#adminmenu .tag_dash_divider div.wp-menu-name:before {
+ border-top: 1px solid #888;
+ content:"";
+ margin: 0 auto; 
+ position: absolute; 
+ top: 50%;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ width: 95%;
+ z-index: -1;
+ }
+#adminmenu .tag_dash_divider div.wp-menu-name span { 
+        background: #23282d; 
+        padding: 0 10px; 
+    }
+body #adminmenu li.wp-menu-separator {display:none;}
+#adminmenu .tag_dash_divider a {color:#888;}
+.tag_dash_divider {pointer-events: none;
+  cursor: default;}
+
+/** autoptimize link unclickable but still can clear cache */
+#wp-admin-bar-autoptimize a {pointer-events: none;
+  cursor: default;}
+body #wpadminbar .quicklinks li .blavatar:before {
+    content: "\f344";
+}
+
+/* end top dashboard menu stuff */
+
+/* dashboard widgets override */
+/*
+.postbox-container {
+    min-width: 33% !important;
+}
+*/
+/* empty box area */
+
+/*
+.meta-box-sortables.ui-sortable.empty-container { 
+    display: none;
+}
+*/
+.metabox-holder #postbox-container-1 h2.hndle,
+.metabox-holder #postbox-container-2 h2.hndle,
+.metabox-holder #postbox-container-3 h2.hndle,
+.metabox-holder #postbox-container-4 h2.hndle {
+    color: #fff;
+    text-align:center;
+    font-size:25px;
+}
+.metabox-holder #postbox-container-1 h2.hndle {
+    background: #0073aa;
+}
+.metabox-holder #postbox-container-2 h2.hndle {
+    background: #a90202;
+}
+.metabox-holder #postbox-container-3 h2.hndle {
+    background: #00aa16 ;
+}
+.metabox-holder #postbox-container-4 h2.hndle {
+    background:#f68401 ;
+}
+#wpcontent .welcome-panel {
+    padding: 0px 0px 25px 0;
+    border: 1px solid #ccd0d4;
+  font-size: 18px;
+    line-height: 1.7;
+}
+.welcome-panel li {
+    font-size: 18px;
+}
+
+.metabox-holder #postbox-container-1 .handlediv, .metabox-holder #postbox-container-2 .handlediv, .metabox-holder #postbox-container-3 .handlediv, .metabox-holder #postbox-container-4 .handlediv {
+    background:#003d5a;
+    width: 30px;
+    opacity: 0.4;
+    margin: 6px;
+    border-radius: 50%;
+   height: 30px;
+}
+.metabox-holder #postbox-container-2 .handlediv {
+    background:#590000;
+}
+.metabox-holder #postbox-container-3 .handlediv {
+    background:#00640d;
+}
+
+.metabox-holder #postbox-container-4 .handlediv {
+    background:#ac5c00;
+}
+.metabox-holder #postbox-container-1 .toggle-indicator, 
+.metabox-holder #postbox-container-2 .toggle-indicator,
+.metabox-holder #postbox-container-3 .toggle-indicator,
+.metabox-holder #postbox-container-4 .toggle-indicator{
+    color:#fff;
+    }
+
+ .metabox-holder #postbox-container-1 .postbox:hover .handlediv, 
+.metabox-holder #postbox-container-2 .postbox:hover .handlediv, 
+.metabox-holder #postbox-container-3 .postbox:hover .handlediv, 
+.metabox-holder #postbox-container-4 .postbox:hover .handlediv,
+.metabox-holder #postbox-container-1  .postbox:hover .toggle-indicator, 
+.metabox-holder #postbox-container-2  .postbox:hover .toggle-indicator,
+.metabox-holder #postbox-container-3  .postbox:hover .toggle-indicator,
+.metabox-holder #postbox-container-4  .postbox:hover .toggle-indicator {
+    opacity:1;
+    }
+
+
+/* ACF */
+ 
+ #poststuff .acf-field.dashicons-before .acf-label {display: inline-block;}
+  #poststuff .acf-field.dashicons-before .acf-label {display: inline-block;}
+  #poststuff .acf-postbox h2.hndle {transition:all ease-in-out 0.6s;background: #0073aa;color: #fff !important;}
+   #poststuff .acf-postbox h2.hndle:hover {transition:all ease-in-out 0.6s;background: #0073aa !important;color: #fff !important;}
+  #poststuff .acf-postbox.closed h2.hndle {transition:all ease-in-out 0.6s;background: #5d899e !important;color:#ddd !important;}
+    #poststuff .acf-postbox.closed h2.hndle:hover {transition:all ease-in-out 0.6s;background: #0073aa !important;}
+  #poststuff .acf-postbox h2.hndle:after {color:#ededed !important;transition:all ease-in-out 0.6s;content:" - (click to close - drag to reorder)";}
+  #poststuff .acf-postbox.closed h2.hndle:after {color:#fff !important;transition:all ease-in-out 0.6s;content:" - (click to open - drag to reorder)";}
+  #poststuff .acf-postbox>.hndle .acf-hndle-cog {color: #ffffff;}
+#poststuff .acf-postbox .toggle-indicator {transition:all ease-in-out 0.6s;color: #ffffff !important;
+    border-color: transparent;background: #46b450;display: inline-block;height: 24px;width: 24px;border: transparent solid 1px;border-radius: 100%;font-size: 16px;line-height: 26px;text-align: center;text-decoration: none;vertical-align: top;box-sizing: content-box;}
+#poststuff .acf-postbox.closed .toggle-indicator {color: #ffffff !important;background: #dc3232;}
+#poststuff .acf-postbox .toggle-indicator:hover {   background: #7fc241;}
+.js #poststuff .postbox.acf-postbox .handlediv:focus .toggle-indicator:before {box-shadow: none;}
+.js #poststuff .postbox.acf-postbox .handlediv .toggle-indicator:before {margin: -3px 0 0 -10px;width: 20px;border-radius: 50%;text-indent: -1px;font: normal 30px/1 dashicons;}
+body .acf-field input[type="text"], body .acf-field input[type="password"], body .acf-field input[type="date"], body .acf-field input[type="datetime"], body .acf-field input[type="datetime-local"], body .acf-field input[type="email"], body .acf-field input[type="month"], body .acf-field input[type="number"], body .acf-field input[type="search"], body .acf-field input[type="tel"], body .acf-field input[type="time"], body .acf-field input[type="url"], body .acf-field input[type="week"], body .acf-field textarea, body .acf-field select {color:#000;}
+body .acf-field input[type="text"]::placeholder, body .acf-field input[type="password"]::placeholder, body .acf-field input[type="date"]::placeholder, body .acf-field input[type="datetime"]::placeholder, body .acf-field input[type="datetime-local"]::placeholder, body .acf-field input[type="email"]::placeholder, body .acf-field input[type="month"]::placeholder, body .acf-field input[type="number"]::placeholder, body .acf-field input[type="search"]::placeholder, body .acf-field input[type="tel"]::placeholder, body .acf-field input[type="time"]::placeholder, body .acf-field input[type="url"]::placeholder, body .acf-field input[type="week"]::placeholder, body .acf-field textarea::placeholder, body .acf-field select::placeholder  {color:#b8b8b8;}
+
+

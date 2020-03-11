@@ -11,8 +11,18 @@ wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
 
-# ignore these plugins
-wp-content/plugins/hello.php
+# ignore all plugins except:
+# You must exclude everything on the way to the destinations, but you must include the destinations: Note: This is an exclusion file so the logic is inverted. Ignore all, except the elementor directory, ignore all in elementor directory, except the core directory...
+wp-content/plugins/*
+!wp-content/plugins/elementor/
+wp-content/plugins/elementor/*
+!wp-content/plugins/elementor/core/
+wp-content/plugins/elementor/core/*
+!wp-content/plugins/elementor/core/role-manager
+!wp-content/plugins/dashboard-welcome-for-elementor/
+wp-content/plugins/dashboard-welcome-for-elementor/*
+!wp-content/plugins/dashboard-welcome-for-elementor/classes
+!wp-content/plugins/zeus-modified-plugins-reminder
 
 
 
@@ -22,7 +32,7 @@ wp-content/plugins/hello.php
 # ignore all themes except
 wp-content/themes/*
 !wp-content/themes/bullish
-
+wp-content/themes/bullish/acf-json
 # ignore specific themes & items
 wp-content/upgrade/
 wp-content/uploads/
@@ -35,6 +45,10 @@ wp-content/cache/
 *.back
 *.old
 *.OLD
+*.*.BAK
+*.*.back
+*.*.old
+*.*.OLD
 
 # ignore node dependency directories
 node_modules/

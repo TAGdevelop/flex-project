@@ -1,0 +1,65 @@
+@font-face {
+  font-family: Fira Code Regular;
+  src: url('../font/FiraCode-Regular.woff2') format('woff2'), 
+    url('../font/FiraCode-Regular.woff') format('woff');
+}
+/** BETTER INACTIVE PLUGINS VIEW **/
+.plugins tr.inactive {
+   background: #fffaf3;
+    font-style: italic;
+}
+.plugins tr.inactive td,.plugins tr.inactive th, .plugins tr.active+tr.inactive td, .plugins tr.active+tr.inactive th {
+    border-bottom: 1px solid #ffeeda;
+    border-top: 1px solid #ffeeda;
+}
+.plugins tr.inactive+tr.inactive td, .plugins tr.inactive+tr.inactive th {
+    border-top: none;
+ }
+.plugins tr.inactive th {border-left: 4px solid #ff8800;background: #ffede1;}
+.plugins tr.active th {border-left: 4px solid #ff8800;background: #e0f4fb;}
+
+/** END BETTER INACTIVE PLUGINS VIEW **/
+
+
+/** ADD CODE BELOW **/
+/** TARGET MODIFIED PLUGINS via data-slug attribute **/
+
+
+#toplevel_page_zeus-modified-plugins-reminder-admin-view .dashicons-admin-generic:before {
+       content: '\f485';
+           }
+.plugins tr[data-slug=dashboard-welcome-for-elementor] td.plugin-title:after,
+.plugins tr[data-slug=elementor] td.plugin-title:after {
+    content:' MODIFIED PLUGIN CODE - Please see Zeus Pro menu item.'; 
+    }
+.plugins tr.active[data-slug=dashboard-welcome-for-elementor] td:nth-of-type(1),
+.plugins tr.active[data-slug=elementor] td:nth-of-type(1){
+    background: #fffccf;
+    }
+.plugins tr.inactive[data-slug=dashboard-welcome-for-elementor] th,
+.plugins tr.inactive[data-slug=elementor] th  {
+    border-left: 4px solid #ff0000;background: #ffd4b5;
+    }
+    
+    
+    /** ADMIN PAGE STUFF **/
+.zeus-settings-wrap {
+	background: #fff;
+	max-width: 860px;
+	margin: 25px auto;
+	padding: 25px;
+}
+#zeus code {font-family:'Fira Code Regular',monospace; background:transparent; font-size:15px;}
+.all-copy pre {  
+  -webkit-user-select: all;  /* Chrome all / Safari all */
+  -moz-user-select: all;     /* Firefox all */
+  -ms-user-select: all;      /* IE 10+ */
+  user-select: all;          /* Likely future */   
+}
+#zeus .col-50 {width:49%;float:left; }
+#zeus .col-50:nth-of-type(2) {margin-left:25px;}
+#zeus .notice {
+    color: #9dff00;
+    background: #000;
+   font-size: 18px;
+}
