@@ -1,4 +1,6 @@
 # ignore everything in the root except the "wp-content" directory.
+wp-admin/
+wp-includes/
 !wp-content/
 
 # ignore everything in the "wp-content" directory, except:
@@ -12,12 +14,8 @@ wp-content/plugins/hello.php
 
 # ignore all plugins except:
 wp-content/plugins/*
-!wp-content/plugins/elementor/core/role-manager/
-
-wp-content/plugins/*
-!wp-content/plugins/dashboard-welcome-for-elementor/classes
-
-wp-content/plugins/*
+!wp-content/plugins/elementor
+!wp-content/plugins/dashboard-welcome-for-elementor
 !wp-content/plugins/zeus-modified-plugins-reminder
 
 
