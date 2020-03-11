@@ -2,18 +2,34 @@
 !wp-content/
 
 # ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
+# "plugins", "themes" directory
 wp-content/*
-!wp-content/mu-plugins/
 !wp-content/plugins/
 !wp-content/themes/
 
 # ignore these plugins
 wp-content/plugins/hello.php
 
-# ignore specific themes
+# ignore all plugins except:
+wp-content/plugins/*
+!wp-content/plugins/elementor/core/role-manager/
+
+wp-content/plugins/*
+!wp-content/plugins/dashboard-welcome-for-elementor/classes
+
+wp-content/plugins/*
+!wp-content/plugins/zeus-modified-plugins-reminder
+
+
+
+# ignore specific themes & items
 wp-content/themes/twenty*/
 wp-content/themes/flex*/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wphb-cache/
+wp-content/wphb-logs/
+wp-content/cache/
 
 # ignore node dependency directories
 node_modules/
