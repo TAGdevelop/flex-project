@@ -22,9 +22,11 @@ wp-content/plugins/*
 
 
 
+# ignore all themes except
+wp-content/themes/*
+!wp-content/themes/bullish
+
 # ignore specific themes & items
-wp-content/themes/twenty*/
-wp-content/themes/flex*/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/wphb-cache/
