@@ -14,9 +14,7 @@ wp-content/*
 # ignore these plugins
 wp-content/plugins/hello.php
 
-# ignore all plugins except:
-wp-content/plugins/*
-!wp-content/plugins/elementor/core/role-manager/
+
 
 
 
