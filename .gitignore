@@ -17,10 +17,7 @@ wp-content/plugins/hello.php
 # ignore all plugins except:
 wp-content/plugins/*
 !wp-content/plugins/elementor/core/role-manager/
-wp-content/plugins/*
-!wp-content/plugins/dashboard-welcome-for-elementor/classes/
-wp-content/plugins/*
-!wp-content/plugins/zeus-modified-plugins-reminder/
+
 
 
 
