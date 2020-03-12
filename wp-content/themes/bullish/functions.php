@@ -6,7 +6,7 @@
    ===============
    THEME ROOT FUNCTIONS
    ===============
-   
+   GitHub
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
