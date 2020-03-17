@@ -169,29 +169,38 @@ class Role_Manager extends Settings_Page {
 		</div>
 		<?php
 	}
+ 
+  /**
+   * @since 2.0.0
+   * @access public
+   */
+  public function get_user_restrictions_array() {
+    $user  = wp_get_current_user();
+    $user_roles = $user->roles;
+    $options = $this->get_user_restrictions();
+    $restrictions = [];
+    if ( empty( $options ) ) {
+      return $restrictions;
+    }
 
-	/**
-	 * @since 2.0.0
-	 * @access public
-	 */
-	public function get_user_restrictions_array() {
-		$user  = wp_get_current_user();
-		$user_roles = $user->roles;
-		$options = $this->get_user_restrictions();
-		$restrictions = [];
-		if ( empty( $options ) ) {
-			return $restrictions;
-		}
-
-		foreach ( $user_roles as $role ) {
-			if ( ! isset( $options[ $role ] ) ) {
-				continue;
-			}
-			$restrictions = array_merge( $restrictions, $options[ $role ] );
-		}
-		return array_unique( $restrictions );
-	}
-
+    foreach ( $user_roles as $role ) {
+      if ( ! isset( $options[ $role ] ) ) {
+        continue;
+      }
+      $restrictions = array_merge( $restrictions, $options[ $role ] );
+    }
+    
+  if (!empty($_GET['post']) && $_GET['action'] == 'elementor') {
+      $pid = $_GET['post'];
+      $post_type = get_post_type($pid);
+        $roles = ( array ) $user_roles;
+        if (in_array('client_publisher', $roles) && $post_type == 'page') {
+          $restrictions[] = 'design';
+        }
+    }
+    
+    return array_unique( $restrictions );
+  }
 	/**
 	 * @since 2.0.0
 	 * @access private
