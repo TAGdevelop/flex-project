@@ -32,7 +32,7 @@ wp-content/plugins/dashboard-welcome-for-elementor/*
 # ignore all themes except
 wp-content/themes/*
 !wp-content/themes/bullish
-wp-content/themes/bullish/acf-json
+!wp-content/themes/bullish/acf-json
 # ignore specific themes & items
 wp-content/upgrade/
 wp-content/uploads/

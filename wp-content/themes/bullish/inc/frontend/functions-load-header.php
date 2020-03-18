@@ -17,6 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 //check if plugin class exists 
 if(class_exists('ACF')){
+// this probably won't be needed
     function acf_tag_style_css() {
     $primary_bg_color = get_field('color_primary_bg', 'options');
     $primary_trans_color = get_field('color_primary_translucent', 'options');
@@ -36,7 +37,10 @@ if(class_exists('ACF')){
     </style>
     <?php
     }
-    add_action( 'wp_head', 'acf_tag_style_css');
+
+add_action( 'wp_head', 'acf_tag_style_css');
+
+
     
     function acf_tag_header_code() {
          if (get_field('tag_header_tag') )  { 
@@ -47,5 +51,31 @@ if(class_exists('ACF')){
     
     }
     add_action( 'wp_head', 'acf_tag_header_code');
+
+
+
+// Add tag_style + ACF option to body class
+// this probably won't be needed
+
+add_filter( 'body_class', 'tag_add_body_class' );
+function tag_add_body_class( $all_classes ) {
+
+         $primary_bg = get_field('primary_background_selector', 'option',  get_queried_object_id() ) ;
+
+         $primary_bg  = esc_attr( trim( $primary_bg ) );
+
+        $body_bg = get_field('body_selector', 'option',  get_queried_object_id() ) ;
+
+         $body_bg  = esc_attr( trim( $body_bg ) );
+       
+       
+        $all_classes[]       = 'tag_style ' . $primary_bg .' ' . $body_bg . ' ';
+   
+
+    return $all_classes;
+ }
+
+
+
 
 } // end if ACF class exits

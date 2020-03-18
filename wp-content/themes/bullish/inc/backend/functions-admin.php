@@ -44,11 +44,21 @@ if( function_exists('acf_add_options_page') ) {
 		acf_add_options_sub_page(array(
 		'page_title' 	=> 'Hours of Operation',
 		'menu_title'	=> 'Hours of Operation',
-		'parent_slug'	=> 'tag-global-settings',
+		'parent_slug'	=> 'tag-global',
 	));
 		acf_add_options_sub_page(array(
-		'page_title' 	=> 'All Code',
-		'menu_title'	=> 'All Code',
+		'page_title' 	=> 'Google Tag Manager',
+		'menu_title'	=> 'Google Tag Manager',
+		'parent_slug'	=> 'tag-global',
+	));
+		acf_add_options_sub_page(array(
+		'page_title' 	=> 'Header-Footer Code',
+		'menu_title'	=> 'Header-Footer Code',
+		'parent_slug'	=> 'tag-global',
+	));
+			acf_add_options_sub_page(array(
+		'page_title' 	=> 'Forms Lock',
+		'menu_title'	=> 'Forms Lock',
 		'parent_slug'	=> 'tag-global',
 	));
 		acf_add_options_sub_page(array(
