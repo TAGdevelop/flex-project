@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
  
     
 // EQUAL HEIGHT AMENITIES - see https://chicago.tagmarketingdesigns.com/
- // Select and loop the container element of the elements you want to equalise
+ // Select and loop the container row  of the elements you want to equalise
     $('.equal_wrap').each(function(){  
       
       // Cache the highest
@@ -27,7 +27,33 @@ jQuery(document).ready(function($) {
     });     
     
     
-   
+   //initialize swiper when document ready
+
+  var alertSwiper = new Swiper ('.alert_swiper-container', {
+ loop: false,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    initialSlide: 1,
+    watchOverflow: true,
+        autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.elementor-swiper-button-next',
+        prevEl: '.elementor-swiper-button-prev',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: false,
+      }
+
+    });
+
 
   
   

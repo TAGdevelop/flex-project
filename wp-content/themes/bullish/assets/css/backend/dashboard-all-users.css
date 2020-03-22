@@ -96,24 +96,25 @@ body #wpadminbar .quicklinks li .blavatar:before {
     display: none;
 }
 */
-.metabox-holder #postbox-container-1 h2.hndle,
-.metabox-holder #postbox-container-2 h2.hndle,
-.metabox-holder #postbox-container-3 h2.hndle,
-.metabox-holder #postbox-container-4 h2.hndle {
+/* Dashboard welcome widgets */
+.index-php .metabox-holder #postbox-container-1 h2.hndle,
+.index-php .metabox-holder #postbox-container-2 h2.hndle,
+.index-php .metabox-holder #postbox-container-3 h2.hndle,
+.index-php .metabox-holder #postbox-container-4 h2.hndle {
     color: #fff;
     text-align:center;
     font-size:25px;
 }
-.metabox-holder #postbox-container-1 h2.hndle {
+.index-php .metabox-holder #postbox-container-1 h2.hndle {
     background: #0073aa;
 }
-.metabox-holder #postbox-container-2 h2.hndle {
+.index-php .metabox-holder #postbox-container-2 h2.hndle {
     background: #a90202;
 }
 .metabox-holder #postbox-container-3 h2.hndle {
     background: #00aa16 ;
 }
-.metabox-holder #postbox-container-4 h2.hndle {
+.index-php .metabox-holder #postbox-container-4 h2.hndle {
     background:#f68401 ;
 }
 #wpcontent .welcome-panel {
@@ -126,7 +127,7 @@ body #wpadminbar .quicklinks li .blavatar:before {
     font-size: 18px;
 }
 
-.metabox-holder #postbox-container-1 .handlediv, .metabox-holder #postbox-container-2 .handlediv, .metabox-holder #postbox-container-3 .handlediv, .metabox-holder #postbox-container-4 .handlediv {
+.index-php .metabox-holder #postbox-container-1 .handlediv, .index-php .metabox-holder #postbox-container-2 .handlediv, .index-php .metabox-holder #postbox-container-3 .handlediv, .index-php .metabox-holder #postbox-container-4 .handlediv {
     background:#003d5a;
     width: 30px;
     opacity: 0.4;
@@ -134,31 +135,31 @@ body #wpadminbar .quicklinks li .blavatar:before {
     border-radius: 50%;
    height: 30px;
 }
-.metabox-holder #postbox-container-2 .handlediv {
+.index-php .metabox-holder #postbox-container-2 .handlediv {
     background:#590000;
 }
-.metabox-holder #postbox-container-3 .handlediv {
+.index-php .metabox-holder #postbox-container-3 .handlediv {
     background:#00640d;
 }
 
-.metabox-holder #postbox-container-4 .handlediv {
+.index-php .metabox-holder #postbox-container-4 .handlediv {
     background:#ac5c00;
 }
-.metabox-holder #postbox-container-1 .toggle-indicator, 
-.metabox-holder #postbox-container-2 .toggle-indicator,
-.metabox-holder #postbox-container-3 .toggle-indicator,
-.metabox-holder #postbox-container-4 .toggle-indicator{
+.index-php .metabox-holder #postbox-container-1 .toggle-indicator, 
+.index-php .metabox-holder #postbox-container-2 .toggle-indicator,
+.index-php .metabox-holder #postbox-container-3 .toggle-indicator,
+.index-php .metabox-holder #postbox-container-4 .toggle-indicator{
     color:#fff;
     }
 
- .metabox-holder #postbox-container-1 .postbox:hover .handlediv, 
-.metabox-holder #postbox-container-2 .postbox:hover .handlediv, 
-.metabox-holder #postbox-container-3 .postbox:hover .handlediv, 
-.metabox-holder #postbox-container-4 .postbox:hover .handlediv,
-.metabox-holder #postbox-container-1  .postbox:hover .toggle-indicator, 
-.metabox-holder #postbox-container-2  .postbox:hover .toggle-indicator,
-.metabox-holder #postbox-container-3  .postbox:hover .toggle-indicator,
-.metabox-holder #postbox-container-4  .postbox:hover .toggle-indicator {
+ .index-php .metabox-holder #postbox-container-1 .postbox:hover .handlediv, 
+.index-php .metabox-holder #postbox-container-2 .postbox:hover .handlediv, 
+.index-php .metabox-holder #postbox-container-3 .postbox:hover .handlediv, 
+.index-php .metabox-holder #postbox-container-4 .postbox:hover .handlediv,
+.index-php .metabox-holder #postbox-container-1  .postbox:hover .toggle-indicator, 
+.index-php .metabox-holder #postbox-container-2  .postbox:hover .toggle-indicator,
+.index-php .metabox-holder #postbox-container-3  .postbox:hover .toggle-indicator,
+.index-php .metabox-holder #postbox-container-4  .postbox:hover .toggle-indicator {
     opacity:1;
     }
 

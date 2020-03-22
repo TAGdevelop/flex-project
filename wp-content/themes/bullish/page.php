@@ -17,8 +17,8 @@ get_header();
 
    while ( have_posts() ) : the_post(); 
 ?>
-
-<main  <?php post_class( 'tag_bs_pagephpn' ); ?> role="main">
+<?php get_template_part( 'template-parts/tagAlert' ); ?>
+<main  <?php post_class( 'tag_bs_pagephp' ); ?> role="main">
 
 	<div class="page_content_page">
 		<?php the_content(); ?>

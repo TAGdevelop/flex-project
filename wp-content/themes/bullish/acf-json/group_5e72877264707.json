@@ -109,11 +109,19 @@
         {
             "key": "field_5e728d74e9a7b",
             "label": "Header - Google Tag Manager Override",
-            "name": "tag_manager_header",
+            "name": "tag_manager_head",
             "type": "textarea",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e7287c0f7906",
+                        "operator": "==",
+                        "value": "2"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "50",
                 "class": "",
@@ -127,7 +135,7 @@
         },
         {
             "key": "field_5e728d9fe9a7c",
-            "label": "Footer - Google Tag Manager Override",
+            "label": "Body - Google Tag Manager Override",
             "name": "tag_manager_body",
             "type": "textarea",
             "instructions": "",
@@ -170,5 +178,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1584565766
+    "modified": 1584725265
 }

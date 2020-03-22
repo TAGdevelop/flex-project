@@ -1,6 +1,6 @@
 {
     "key": "group_5e36db79c9dee",
-    "title": "tagGLOBAL™ Test",
+    "title": "tagGLOBAL Company Info - Alert Setting",
     "fields": [
         {
             "key": "field_5e377c15e1d34",
@@ -465,7 +465,7 @@
         },
         {
             "key": "field_5e377c7616cad",
-            "label": "Note to Self",
+            "label": "Alert Settings",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -476,9 +476,27 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_permissions": "",
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_5e750c546a3c0",
+            "label": "Alert Display",
+            "name": "alert_display",
+            "type": "button_group",
+            "instructions": "0 : Entire Site\r\n1 : Home Page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [],
+            "allow_null": 0,
+            "default_value": 0,
+            "layout": "horizontal",
+            "return_format": "value"
         },
         {
             "key": "field_5e3797a68503b",
@@ -984,7 +1002,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "tag-global"
+                "value": "acf-options-company-info"
             }
         ]
     ],
@@ -996,5 +1014,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1581719948
+    "modified": 1584729288
 }
