@@ -1,4 +1,3 @@
-<!-- Start Alert section -->
 <?php 
 	$args = array('post_type' => 'alert',
 				'post_status' => 'publish',
@@ -9,6 +8,7 @@
     $ft_query = new WP_Query($args);
     if( $ft_query->have_posts() ):
 ?>
+<!-- Start Alert section -->
 <div class="elementor-section elementor-section-boxed">
 <div class="elementor-container ">
     <div class="elementor-row">
@@ -56,5 +56,5 @@
 </div>
 </div>
 </div>
-<?php endif; ?>
 <!-- END ALERT -->
+<?php endif; 

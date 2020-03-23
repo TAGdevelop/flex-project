@@ -828,14 +828,11 @@
                 "id": ""
             },
             "choices": {
-                "2": "Cancellation Request",
                 "1": "Contact Us",
-                "3": "FB Landing Page Form",
-                "4": "FB Landing Page Questions",
-                "5": "Freeze Request",
-                "6": "Job Application TAG Form",
-                "7": "Main - FREE 7-DAY PASS SIGN UP NOW",
-                "8": "Main - Questions"
+                "2": "FB - Offer - DEMO",
+                "3": "FB - Questions - DEMO",
+                "4": "PS - 7 Day Pass - DEMO",
+                "5": "PS - Questions - DEMO"
             },
             "default_value": [],
             "allow_null": 1,
@@ -1502,6 +1499,13 @@
                 "operator": "==",
                 "value": "template\/template-homeSlider.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
         ]
     ],
     "menu_order": 0,
@@ -1524,5 +1528,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1581642955
+    "modified": 1584920095
 }

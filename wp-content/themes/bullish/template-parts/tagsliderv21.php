@@ -433,6 +433,7 @@ function muteUnmute() {
 </div>
 </section>
 <?php endif; ?>
-<?php endif; ?> <!-- END if hero_type != 'slider' -->
-<?php endif; ?> <!-- END if hero_type == 'none' -->
+<?php endif;  // END if hero_type != 'slider' ?> 
+<?php endif; // END if hero_type == 'none' ?>
+
 <?php } // end check if acf exists

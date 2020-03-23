@@ -2,17 +2,16 @@
 /**
  * Template Name: Home tagSlider
  * Template Post Type: page, tag_legal, tag_landing
- * @package HelloElementorChild
+ * @package BullISH 
  */
 
 	get_header();
 	while ( have_posts() ) : the_post();
-?> 
 
-<?php get_template_part( 'template-parts/tagAlert' ); ?>
-<?php get_template_part( 'template-parts/tagsliderv21' );
-tag_enqueue_theme_scripts('tagsliderv21');
-
+wp_body_code(); // used any for body code & GTM code 
+get_template_part( 'template-parts/tagAlert' ); 
+get_template_part( 'template-parts/tagsliderv21' ); // convert me to elementor widget
+tag_enqueue_theme_scripts('tagsliderv21'); // load scripts for elementor edit page
 ?>
 
 

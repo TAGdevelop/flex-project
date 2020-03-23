@@ -21,12 +21,8 @@ function theme_bullish_main_enqueue_styles() {
 // wp_enqueue_style( 'swiper-css', get_template_directory_uri() . '/assets/vendor/swiper/swiper.min.css' );
 wp_enqueue_style( 'maincss', get_template_directory_uri() . '/assets/css/main.css' );
 
-
-
 }
 add_action( 'wp_enqueue_scripts', 'theme_bullish_main_enqueue_styles');
-
-
 
 
 // Register Script for template part
@@ -34,7 +30,7 @@ if (!function_exists('theme_scripts')) {
   function tag_enqueue_theme_scripts($type) {
     if($type==='tagsliderv21'):
         
-         /** OLD scripts and css needed for tagSlider 
+      /** OLD scripts and css needed for tagSlider 
        ** should be re-written with bootstrap 4 and swiper js
        ** swiper slider library seems to load with elementor
        **/

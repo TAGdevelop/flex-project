@@ -3,9 +3,12 @@
 }
 
  get_header();
+wp_body_open(); // used any for body code & GTM code 
+get_template_part( 'template-parts/tagAlert' ); 
+
 ?>
 
-<?php get_template_part( 'template-parts/tagAlert' ); ?>
+
 <div class="bs_index">
   <?php if ( have_posts() ) : while ( have_posts() ) :   the_post(); ?>
     

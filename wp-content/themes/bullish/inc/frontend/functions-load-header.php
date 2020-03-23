@@ -76,12 +76,11 @@ function tag_add_body_class( $all_classes ) {
  }
 
 
-// Google Tag Manager Options
+// Add to Header Google Tag Manager Options
  function acf_tag_gtm() {
 
       if (get_field('google_tag_selector', 'options') == 0 && !empty(get_field('google_tag_manager', 'options'))): ?>
-        <!-- START GTM OPTIONS HEAD -->
-          <!-- SINGLE GTM CONTAINER -->
+         <!-- SINGLE GTM CONTAINER -->
           <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -89,10 +88,8 @@ function tag_add_body_class( $all_classes ) {
             })(window,document,'script','dataLayer','<?php the_field('google_tag_manager', 'options'); ?>');
           </script>
           <!-- END SINGLE GTM CONTAINER -->
-          <!-- END GTM OPTIONS HEAD -->
           <?php endif; ?>
           <?php if (get_field('google_tag_selector', 'options')== 1 && !empty(get_field('gtm_1', 'options')) && !empty(get_field('gtm_2', 'options'))): ?>
-          <!-- START GTM OPTIONS HEAD -->
           <!-- DOUBLE GTM CONTAINER -->
           <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -107,19 +104,75 @@ function tag_add_body_class( $all_classes ) {
             })(window,document,'script','dataLayer','<?php the_field('gtm_2', 'options'); ?>');
           </script>
           <!-- END DOUBLE GTM CONTAINER -->
-          <!-- END GTM OPTIONS HEAD -->
           <?php endif; ?>
           <?php if (get_field('google_tag_selector', 'options') == 2 && !empty(get_field('tag_manager_head', 'options'))): ?>
-          <!-- START GTM OPTIONS HEAD -->
           <!--  GTM CONTAINER OVERRIDE -->
           <?php the_field('tag_manager_head', 'options'); ?>
           <!--  END GTM CONTAINER OVERRIDE-->
-          <!-- END GTM OPTIONS HEAD -->
           <?php endif; ?>
           
           <?php
 
 }
-    add_action( 'wp_head', 'acf_tag_gtm');
+    add_action( 'wp_head', 'acf_tag_gtm',1,1);
 
+// Add to Header GEO Meta Options
+ function acf_geo_meta() {
+    ?>
+
+<!-- START GEO META -->
+          <?php if (get_field('country_code', 'options') ) : ?>
+            <meta name="geo.region" content="<?php the_field('country_code', 'options'); ?>-<?php the_field('state', 'options'); ?>" />
+             <?php endif; ?>
+              <?php if (get_field('city', 'options') ) : ?>
+          <meta name="geo.placename" content="<?php the_field('city', 'options'); ?>" />
+           <?php endif; ?>
+            <?php if (get_field('latitude', 'options') ) : ?>
+          <meta name="geo.position" content="<?php the_field('latitude', 'options'); ?>;<?php the_field('longitude', 'options'); ?>" />
+          <meta name="ICBM" content="<?php the_field('latitude', 'options'); ?>, <?php the_field('longitude', 'options'); ?>" />
+           <?php endif; ?>
+           <?php if (get_field('copyright_name', 'options') ) : ?>
+          <meta name="copyright" content="<?php the_field('copyright_name', 'options'); ?>" />
+           <?php endif; ?>
+            <!-- END GEO META -->
+            <?php
+}
+    add_action( 'wp_head', 'acf_geo_meta');
+
+
+// add gtm to body
+   
+function acf_gtm_body() {
+    ?>
+
+
+          <?php if (get_field('google_tag_selector', 'options') == 0 && !empty(get_field('google_tag_manager', 'options'))): ?>
+          <!-- SINGLE GTM CONTAINER (noscript) --> 
+          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php the_field('google_tag_manager', 'options'); ?>"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+          <!-- END SINGLE GTM CONTAINER (noscript) -->
+          <?php endif; ?>
+         <?php if (get_field('google_tag_selector', 'options')== 1 && !empty(get_field('gtm_1', 'options')) && !empty(get_field('gtm_2', 'options'))): ?>
+          <!-- Double GTM Container (noscript) -->
+          <noscript><iframe src="//www.googletagmanager.com/ns.html?id=<?php the_field('gtm_1', 'options'); ?>"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+          <noscript><iframe src="//www.googletagmanager.com/ns.html?id=<?php the_field('gtm_2', 'options'); ?>"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+          <!-- End Double GTM Container (noscript) -->
+          <?php endif; ?>
+         <?php if (get_field('google_tag_selector', 'options') == 2 && !empty(get_field('tag_manager_body', 'options'))): ?>
+          <!--  GTM CONTAINER OVERRIDE -->
+          <?php the_field('tag_manager_body', 'options'); ?>
+          <!--  END GTM CONTAINER OVERRIDE-->
+
+          <?php endif; ?>
+         
+     <?php
+  }
+    add_action( 'wp_body_code', 'acf_gtm_body');
 } // end if ACF class exits
+
+ function wp_body_code() {
+do_action('wp_body_code');
+}
+
