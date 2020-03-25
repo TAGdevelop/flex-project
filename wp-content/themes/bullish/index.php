@@ -4,7 +4,7 @@
 
  get_header();
 wp_body_open(); // used any for body code & GTM code 
-get_template_part( 'template-parts/tagAlert' ); 
+//get_template_part( 'template-parts/tagAlert' ); 
 
 ?>
 

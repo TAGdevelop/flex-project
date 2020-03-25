@@ -8,6 +8,7 @@
     $ft_query = new WP_Query($args);
     if( $ft_query->have_posts() ):
 ?>
+
 <!-- Start Alert section -->
 <div class="elementor-section elementor-section-boxed">
 <div class="elementor-container ">

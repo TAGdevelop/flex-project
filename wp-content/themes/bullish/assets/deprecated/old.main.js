@@ -62,25 +62,7 @@ owl.trigger('stop.owl.autoplay');
 owl.trigger('play.owl.autoplay');
 });
 
-// VIDEO CONTROLS
 
-$(function(textfade){
-    
-    var video = $('#tagvideo')[0];
-    
-    video.addEventListener('playing', function(){
-           $('.wordswrap').fadeOut(500);
-    });
-     video.addEventListener('pause', function(){
-           $('.wordswrap').fadeIn(500);
-           $('.play_pause_btn').removeClass('fa-pause');
-           $('.play_pause_btn').addClass('fa-play');
-           
-    });
-    
-});
-
-// Play video on scroll
 
 
 

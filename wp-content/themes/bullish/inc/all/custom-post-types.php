@@ -232,14 +232,14 @@ function cptui_register_my_cpts() {
     "capability_type" => "post",
     "map_meta_cap" => true,
     "hierarchical" => false,
-    "rewrite" => [ "slug" => "alert", "with_front" => true ],
+    "rewrite" => [ "slug" => "alerts", "with_front" => true ],
     "query_var" => true,
     "menu_position" => '',
     "menu_icon" => "dashicons-external",
     "supports" => [ "title", "editor", "thumbnail", "custom-fields", "revisions", "author", "page-attributes" ],
   ];
 
-  register_post_type( "alert", $args );
+  register_post_type( "alerts", $args );
 
   /**
    * Post Type: Single Pages.
