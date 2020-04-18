@@ -35,7 +35,11 @@ $vid_control_group = get_field('video_controls');
   ?>
   
  
-  <?php if( $hero_group['hero_type'] != 'null'  ): ?>
+
+
+
+
+
 <section id="form_sliderwpcats" class="group_slider tag_slider">
 <div id="slider_block" class="slider_form_group  <?php if(get_field('form_choice') != '0' ): ?>  has_form <?php else: ?> no_form<?php endif; ?>">
   <div class="slider_wp">
@@ -178,11 +182,16 @@ $vid_control_group = get_field('video_controls');
 </section>
 <?php endif; ?>
 <!-- END SLIDER -->
-<?php endif; ?> <!-- end if hero_type == '' has no value - when page is new --> 
 <?php else: ?> 
-  <?php if( $hero_group['hero_type'] != 'null' ): ?>
-   <?php  if ($hero_group['hero_type'] != 'slider' ): ?>
-    <?php  if ($hero_group['hero_type'] != 'none' ): ?>
+
+
+
+
+
+  
+   <?php  if ($hero_group['hero_type'] == 'image' || $hero_group['hero_type'] == 'video') : ?>
+   
+
    
 <?php 
   $hgp_desk_img = $hero_group['desktop_image'];
@@ -303,8 +312,7 @@ function playPause() {
         ppbutton.innerHTML = "<i class='play_pause_btn fas fa-play'></i>";
         }
       } 
-});
-$(function(textfade){
+      function textfade(){
     
     var video = $('#tagvideo')[0];
     
@@ -318,7 +326,9 @@ $(function(textfade){
            
     });
     
+}
 });
+
 </script>
             <?php endif; ?>
             <?php if ($vid_control_group ['hide_mute'] != 'true' ):  ?>
@@ -447,7 +457,7 @@ function muteUnmute() {
 </div>
 </section>
 <?php endif; ?>
-<?php endif;  // END if hero_type != 'slider' ?> 
-<?php endif; // END if hero_type == 'none' ?>
-<?php endif; ?> <!-- end if hero_type == '' has no value - when page is new --> 
+<?php endif;  // END if hero_type == 'image' || 'video' ?> 
+
+
 <?php } // end check if acf exists

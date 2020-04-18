@@ -2,17 +2,17 @@
     Theme Name: tagFLEX Project
     Template: hello-elementor
     Text Domain: flex-project-child
-	Theme URI: https://tagdigitalmarketing.com
-	Description: A extension to aid in ACF inclusions to the plain-vanilla & lightweight theme for Elementor page builder.
-	Author: tagDevelopment Team
-	Author URI: https://tagdigitalmarketing.com
-	Version: 1.0.1
-	Stable tag: 1.0.1
-	Requires at least: 4.7
-	Tested up to: 5.2
-	License: GNU General Public License v3 or later.
-	License URI: https://www.gnu.org/licenses/gpl-3.0.html
-	Tags: flexible-header, ACF, Advanced Custom Fields, custom-colors, custom-menu, custom-logo, featured-images, rtl-language-support, threaded-comments, translation-ready
+    Theme URI: https://tagdigitalmarketing.com
+    Description: A extension to aid in ACF inclusions to the plain-vanilla & lightweight theme for Elementor page builder.
+    Author: tagDevelopment Team
+    Author URI: https://tagdigitalmarketing.com
+    Version: 1.0.1
+    Stable tag: 1.0.1
+    Requires at least: 4.7
+    Tested up to: 5.2
+    License: GNU General Public License v3 or later.
+    License URI: https://www.gnu.org/licenses/gpl-3.0.html
+    Tags: flexible-header, ACF, Advanced Custom Fields, custom-colors, custom-menu, custom-logo, featured-images, rtl-language-support, threaded-comments, translation-ready
 */
 
 /*
@@ -39,8 +39,11 @@
 /* HERO STYLE */
 body #form_sliderwpcats .dropdown-menu {width: 100%;}
 body #form_sliderwpcats .dropdown-menu>li>a  {font-size:16px;margin:5px 0;}
-#form_sliderwpcats .owl-carousel .owl-stage-outer{/* overflow:visible; */}/* For mobile if there is a dropdown */
-body .owl-carousel { display:block;opacity:0;transition:all 1.5s ease-in-out;}
+#form_sliderwpcats .owl-carousel .owl-stage-outer{/* overflow:visible; */}/* For mobile if there is a dropdown */ 
+
+
+body .owl-carousel {display:block; opacity:0; transition:all 1.5s ease-in-out;}
+body .video .owl-carousel,body .single_image .owl-carousel{display:block; opacity:1; }
 body.no-js .owl-carousel, body .owl-carousel.owl-loaded {opacity:1;max-height: 1200px;transition: all 1.5s ease-in-out;}
 #form_sliderwpcats .has_form .owl-height {min-height:450px;}
 #slider_block #hero-page {background: unset;background-size: unset;color: #fff;bottom: 30px;left:0px;}
@@ -73,8 +76,8 @@ body.no-js .owl-carousel, body .owl-carousel.owl-loaded {opacity:1;max-height: 1
 
 
 /** SLIDER TITLES STYLE **/
-#form_sliderwpcats #slider_block .slider_headings .pl-title {color: var(--scolor);background-color:#fff;padding: 10px 25px;font-size: 60px;line-height: 115%;display: inline-block;margin-bottom: 0;font-weight: 700;}
-#form_sliderwpcats #slider_block .slider_headings .pl-subtitle {color: #fff;background-color: var(--scolor);font-size: 33px;line-height: 115%;padding: 11px 25px;display: inline-block;font-weight: 600;margin:15px 0 0;}
+#form_sliderwpcats #slider_block .slider_headings .pl-title {color: #333);background-color:#fff;padding: 10px 25px;font-size: 60px;line-height: 115%;display: inline-block;margin-bottom: 0;font-weight: 700;}
+#form_sliderwpcats #slider_block .slider_headings .pl-subtitle {color: #fff;background-color: #000;font-size: 33px;line-height: 115%;padding: 11px 25px;display: inline-block;font-weight: 600;margin:15px 0 0;}
 #form_sliderwpcats #slider_block #form-aside {width: 100%;margin-right: 15px;/* float: right; *//* border: 2px solid #00708c; */max-width: 420px;padding: 20px;background: rgba(31, 45, 54, 0.8);/* position: relative; *//* z-index: 999; */}
 .slideimg_masterwrap {position:relative;}
 /** SLIDER IMAGE EFFECT STYLE **/
@@ -117,45 +120,45 @@ body.no-js .owl-carousel, body .owl-carousel.owl-loaded {opacity:1;max-height: 1
 }
 
 .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
-	width: 50px;
-	height: 70px;
-	margin: 0; /* removes margins around nav buttons */
-	background: #fff;
-	background:rgba(255,255,255,0.3);
-	border-radius: 0;
-	color: #ccc;
-	color: rgba(255,255,255,0.4);
-	cursor: pointer;
-	position: absolute;
-	bottom: 50%;
-	z-index: 999;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+    width: 50px;
+    height: 70px;
+    margin: 0; /* removes margins around nav buttons */
+    background: #fff;
+    background:rgba(255,255,255,0.3);
+    border-radius: 0;
+    color: #ccc;
+    color: rgba(255,255,255,0.4);
+    cursor: pointer;
+    position: absolute;
+    bottom: 50%;
+    z-index: 999;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .owl-carousel .owl-nav button.owl-prev:hover, .owl-carousel .owl-nav button.owl-next:hover {
-	background: #fff;
-	background: rgba(255,255,255,0.4);
-	color: #999;
-	color: rgba(0,0,0,0.2);
+    background: #fff;
+    background: rgba(255,255,255,0.4);
+    color: #999;
+    color: rgba(0,0,0,0.2);
 }
 
 .owl-nav button.owl-prev {
-	left: -50px; /* starting position */
+    left: -50px; /* starting position */
 }
 
 .owl-nav button.owl-next {
-	right: -50px; /* starting position */
+    right: -50px; /* starting position */
 }
 
 .owl-carousel:hover .owl-nav button.owl-prev {
-	left: 0; /* target position after transition */
+    left: 0; /* target position after transition */
 }
 
 .owl-carousel:hover .owl-nav button.owl-next {
-	right: 0; /* target position after transition */
+    right: 0; /* target position after transition */
 }
 
 /** SLIDER EXTRA FORMAT  STYLE **/
@@ -185,11 +188,11 @@ body.no-js .owl-carousel, body .owl-carousel.owl-loaded {opacity:1;max-height: 1
 }
 }
 @media only screen and (max-width:768px) {
-	.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
-	font-size: 10px;
-	width: 30px;
-	height: 45px;
-	top: 175px;
+    .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
+    font-size: 10px;
+    width: 30px;
+    height: 45px;
+    top: 175px;
 }
 
   .slider-titem .container,.slider-titem [class*="col-"] {padding:0;margin:0;}
@@ -234,16 +237,16 @@ body.no-js .owl-carousel, body .owl-carousel.owl-loaded {opacity:1;max-height: 1
 /** VIDEO **/
 
     .videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-	}
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    }
 .videoWrapper iframe, .videoWrapper video  { position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%; }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 .vidbg-container video {
     width: auto;
     position: absolute;
@@ -273,7 +276,7 @@ body.no-js .owl-carousel, body .owl-carousel.owl-loaded {opacity:1;max-height: 1
     position: absolute;
     display: inline-flex;
     border-radius: 5px 5px 0 0;
-    background-color: var(--wcolor);
+    background-color: #fff;
     padding: 0 3px;
     top: auto;
     right: auto;
@@ -283,7 +286,7 @@ body.no-js .owl-carousel, body .owl-carousel.owl-loaded {opacity:1;max-height: 1
 }
 .vidbg-frontend-buttons .vidbg-frontend-button {
     text-align: center;
-    color: var(--scolor);
+    color: #333;
     cursor: pointer;
     display: block;
     box-shadow: none;
@@ -299,17 +302,17 @@ body.no-js .owl-carousel, body .owl-carousel.owl-loaded {opacity:1;max-height: 1
 }
 @media only screen and (max-width:1300px) {
     .videoWrapper {
-	padding-bottom: 65.25%; /* 16:9 */
-	padding-top: 160px;
-	}
+    padding-bottom: 65.25%; /* 16:9 */
+    padding-top: 160px;
+    }
     
 }
 
 
 @media only screen and (max-width:767px) {
-	#chicago_hero { height: unset; }
+    #chicago_hero { height: unset; }
     #form_sliderwpcats #slider_block #form-aside {
-   background: var(--mcolor);
+   background: #333;
     }
     #video_block {
     height: 300px;
@@ -318,14 +321,14 @@ body.no-js .owl-carousel, body .owl-carousel.owl-loaded {opacity:1;max-height: 1
    top: 50%;
    }
     .videoWrapper {
-	position: relative;
-	padding-bottom: 74.25%; /* 16:9 */
-	height: 0;
-	}
+    position: relative;
+    padding-bottom: 74.25%; /* 16:9 */
+    height: 0;
+    }
     .videoWrapper video{/* height: 380px; */}
 #video_block .video_wp { position: static; }
- .vidbg-frontend-buttons.bottom-left {background-color: var(--mcolor);}
- .vidbg-frontend-buttons a.vidbg-frontend-button {color: var(--wcolor); }
+ .vidbg-frontend-buttons.bottom-left {background-color: #333;}
+ .vidbg-frontend-buttons a.vidbg-frontend-button {color: #333); }
  
 }
 

@@ -6,7 +6,7 @@
    ===============
    THEME ROOT FUNCTIONS
    ===============
-   GitHub what if I change on the LOCAL server changed remotely
+   GitHub what if I change on the LOCAL server changed remotely test
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
