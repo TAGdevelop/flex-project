@@ -35,7 +35,7 @@ $vid_control_group = get_field('video_controls');
   ?>
   
  
-  <?php if( $hero_group['hero_type'] == 'null' ): ?>
+  <?php if( $hero_group['hero_type'] != 'null'  ): ?>
 <section id="form_sliderwpcats" class="group_slider tag_slider">
 <div id="slider_block" class="slider_form_group  <?php if(get_field('form_choice') != '0' ): ?>  has_form <?php else: ?> no_form<?php endif; ?>">
   <div class="slider_wp">
@@ -180,7 +180,7 @@ $vid_control_group = get_field('video_controls');
 <!-- END SLIDER -->
 <?php endif; ?> <!-- end if hero_type == '' has no value - when page is new --> 
 <?php else: ?> 
-  <?php if( $hero_group['hero_type'] == 'null' ): ?>
+  <?php if( $hero_group['hero_type'] != 'null' ): ?>
    <?php  if ($hero_group['hero_type'] != 'slider' ): ?>
     <?php  if ($hero_group['hero_type'] != 'none' ): ?>
    

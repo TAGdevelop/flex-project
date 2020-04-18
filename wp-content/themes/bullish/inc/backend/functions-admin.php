@@ -13,7 +13,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+// theme support to display items in admin dashboard 
 
+add_theme_support( 'menus' );
+add_theme_support( 'widgets' );
+add_theme_support( 'post-thumbnails' );
 
 // ACF Global Options
 
@@ -95,7 +99,7 @@ if( function_exists('acf_add_options_page') ) {
 	}
  
 
-add_theme_support( 'post-thumbnails' );
+
 // function to remove the dashboard widgets, but only for non-admin users
 // if you want to remove the widgets for admin(s) too, remove the 'if' statement within the function
 function remove_dashboard_widgets() {

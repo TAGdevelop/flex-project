@@ -1,5 +1,33 @@
 <?php
 
+
+add_shortcode('address_vertical', 'address_vert_short');
+function address_vert_short($atts, $content = null){
+  
+  ob_start();
+  ?>
+
+<div class="address_vert tag_street"> <?php the_field('street', 'options'); ?></div>
+<div class="address_vert tag_city_st_zip"><?php the_field('city', 'options'); ?>, <?php the_field('state', 'options'); ?> <?php the_field('zip', 'options'); ?></div>
+
+  <?php
+  return ob_get_clean();
+}
+
+add_shortcode('address_horizontal', 'address_horizon_short');
+function address_horizon_short($atts, $content = null){
+  
+  ob_start();
+  ?>
+
+<span class="address_horz tag_street"><?php the_field('street', 'options'); ?></span> | <span class="address_vert tag_city_st_zip"><?php the_field('city', 'options'); ?>, <?php the_field('state', 'options'); ?> <?php the_field('zip', 'options'); ?></span>
+
+  <?php
+  return ob_get_clean();
+}
+
+
+
 add_shortcode('hours_of_operation', 'main_hours_short');
 function main_hours_short($atts, $content = null){
   
@@ -173,10 +201,7 @@ function main_hours_short($atts, $content = null){
 <?php endwhile; ?>
 <?php endif; ?>
   </div>
-
-
 </div>
-
   <?php
   return ob_get_clean();
 }

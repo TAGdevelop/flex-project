@@ -28,16 +28,20 @@
 #toplevel_page_zeus-modified-plugins-reminder-admin-view .dashicons-admin-generic:before {
        content: '\f485';
            }
+ /** TARGET MODIFIED PLUGINS via data-slug attribute **/
 .plugins tr[data-slug=dashboard-welcome-for-elementor] td.plugin-title:after,
-.plugins tr[data-slug=elementor] td.plugin-title:after {
-    content:' MODIFIED PLUGIN CODE - Please see Zeus Pro menu item.'; 
+.plugins tr[data-slug=elementor] td.plugin-title:after,
+.plugins tr[data-slug=wp-media-folder] td.plugin-title:after{
+    content:' MODIFIED PLUGIN CODE - See Plugins/Zeus Pro menu item.'; 
     }
 .plugins tr.active[data-slug=dashboard-welcome-for-elementor] td:nth-of-type(1),
-.plugins tr.active[data-slug=elementor] td:nth-of-type(1){
+.plugins tr.active[data-slug=elementor] td:nth-of-type(1),
+.plugins tr.active[data-slug=wp-media-folder] td:nth-of-type(1){
     background: #fffccf;
     }
 .plugins tr.inactive[data-slug=dashboard-welcome-for-elementor] th,
-.plugins tr.inactive[data-slug=elementor] th  {
+.plugins tr.inactive[data-slug=elementor] th,
+.plugins tr.inactive[data-slug=wp-media-folder] th {
     border-left: 4px solid #ff0000;background: #ffd4b5;
     }
     
@@ -49,7 +53,7 @@
 	margin: 25px auto;
 	padding: 25px;
 }
-#zeus code {font-family:'Fira Code Regular',monospace; background:transparent; font-size:15px;}
+#zeus code {font-family:'Fira Code Regular',monospace; background:transparent; font-size:15px;white-space:normal;}
 .all-copy pre {  
   -webkit-user-select: all;  /* Chrome all / Safari all */
   -moz-user-select: all;     /* Firefox all */

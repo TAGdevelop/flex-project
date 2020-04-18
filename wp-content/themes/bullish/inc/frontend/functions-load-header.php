@@ -170,9 +170,43 @@ function acf_gtm_body() {
      <?php
   }
     add_action( 'wp_body_code', 'acf_gtm_body');
+    
+function acf_footer_code() {
+    ?>
+
+
+         <?php if (get_field('footer_code', 'options') !='') : ?>
+          <!-- START FOOTER CODE -->
+           <?php the_field('footer_code', 'options'); ?>
+           <!-- END FOOTER CODE -->
+           <?php endif; ?>
+         
+     <?php
+  }
+    add_action( 'wp_footer', 'acf_footer_code');
+    
+
+function acf_header_code() {
+    ?>
+
+
+         <?php if (get_field('header_code', 'options') !='') : ?>
+          <!-- START HEADER CODE -->
+           <?php the_field('header_code', 'options'); ?> 
+           <!-- END HEADER CODE -->
+           <?php endif; ?>
+         
+     <?php
+  }
+    add_action( 'wp_head', 'acf_header_code');
+    
+    
+    
 } // end if ACF class exits
 
  function wp_body_code() {
 do_action('wp_body_code');
 }
+
+
 

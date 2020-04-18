@@ -42,7 +42,7 @@
    } elseif ( in_array( 'client_editor', (array) $user->roles ) ) {
        
        wp_enqueue_style( 'elementor-all',get_stylesheet_directory_uri().'/assets/css/backend/elementor-editor/elementor_all_users.css', false, null );
-     wp_enqueue_style( 'elementor-client-editor',get_stylesheet_directory_uri().'/assets/css/elementor_client_editor.css', false, null );
+     wp_enqueue_style( 'elementor-client-editor',get_stylesheet_directory_uri().'/assets/css/elementor-editor/elementor_client_editor.css', false, null );
        
    
     } else {

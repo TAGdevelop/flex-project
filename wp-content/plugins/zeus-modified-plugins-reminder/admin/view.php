@@ -130,5 +130,58 @@
     <!-- #poststuff -->
   </div>
   <!-- .wrap -->
+  
+
+    <h1>Plugin: WP Media Folder</h1>
+    <!-- .wrap -->
+  <div class="wrap">
+    <div id="poststuff">
+      <div id="post-body" class="metabox-holder ">
+        <!-- main content -->
+        <div id="post-body-content">
+          <div class="meta-box-sortables ui-sortable">
+            <div class="postbox">
+              <h2 class="hndle"><span>Fix for WP Media Folder Preview on hover at the right side of screen. Force hover to popup to the left if hovering over a far right image.</span>
+              </h2>
+              <div class="inside">
+                <h4>GOTO:<br>
+                 /wp-content/plugins/wp-media-folder/assets/js/script.js<br>
+                  at about line 3108 find and replace<br>
+                 
+                </h4>
+                <div class="col-50">
+                  <div class="notice notice-warning inline all-copy">
+                    FIND THIS <br>
+                    <pre><code> 
+   if (e.pageX + wpmfFoldersModule.hover_images[id_img].width > $('body').width()) {
+                            $("#wpmf_preview_image").css("top", e.pageY - 30 - $("#wpmf_preview_image").height() + "px").css("left", e.pageX - wpmfFoldersModule.hover_images[id_img].width - 30 + "px").fadeIn("fast");</code></pre>
+                  </div>
+                </div>
+                <div class="col-50">
+                  <div class="notice notice-success inline all-copy">
+                    REPLACE WITH THIS <br>
+                    <pre><code>  if (e.pageX + wpmfFoldersModule.hover_images[id_img].width + 350 > $('body').width()) {
+                            $("#wpmf_preview_image").css("top", e.pageY - 60 - $("#wpmf_preview_image").height() + "px").css    ("right",  wpmfFoldersModule.hover_images[id_img].width + 30 + "px").fadeIn("fast");</code></pre>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <!-- .inside -->
+            </div>
+            <!-- .postbox -->
+          </div>
+          <!-- .meta-box-sortables .ui-sortable -->
+        </div>
+        <!-- post-body-content -->
+      </div>
+    </div>
+    <!-- #poststuff -->
+  </div>
+  <!-- .wrap -->
+  
+  
+  
+  
+  
 </div>
 <!-- #zeus -->

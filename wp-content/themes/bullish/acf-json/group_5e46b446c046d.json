@@ -1,6 +1,6 @@
 {
     "key": "group_5e46b446c046d",
-    "title": "My new test",
+    "title": "My new test xyz",
     "fields": [
         {
             "key": "field_5e46b4507d7a0",
@@ -40,14 +40,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "acfe_display_title": "",
-    "acfe_autosync": [
-        "php",
-        "json"
-    ],
-    "acfe_permissions": "",
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1581692467
+    "modified": 1586355572
 }
